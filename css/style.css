@@ -126,13 +126,54 @@
                                         }
                                         
                                         header nav .links a {
-                                            color: var(--white_color);
-                                            font-size: 18px;
-                                            transition: 0.4s;
+                                            font-size: 17px;
+                                            background: transparent;
+                                            border: none;
+                                            padding: 1em 1.5em;
+                                            color: #ffedd3;
+                                            text-transform: uppercase;
+                                            position: relative;
+                                            transition: 0.5s ease;
+                                            cursor: pointer;
+                                        }
+                                        
+                                        header nav .links a::before {
+                                            content: "";
+                                            position: absolute;
+                                            left: 0;
+                                            bottom: 0;
+                                            height: 2px;
+                                            width: 0;
+                                            background-color: #ffc506;
+                                            transition: 0.5s ease;
                                         }
                                         
                                         header nav .links a:hover {
-                                            color: var(--main_color);
+                                            color: #1e1e2b;
+                                            transition-delay: 0.5s;
+                                        }
+                                        
+                                        header nav .links a:hover::before {
+                                            width: 100%;
+                                        }
+                                        
+                                        header nav .links a::after {
+                                            content: "";
+                                            position: absolute;
+                                            left: 0;
+                                            bottom: 0;
+                                            height: 0;
+                                            width: 100%;
+                                            background-color: #2b67c1;
+                                            transition: 0.4s ease;
+                                            z-index: -1;
+                                            border-radius: 10px;
+                                        }
+                                        
+                                        header nav .links a:hover::after {
+                                            height: 100%;
+                                            transition-delay: 0.4s;
+                                            color: aliceblue;
                                         }
                                         
                                         header nav .icons {
